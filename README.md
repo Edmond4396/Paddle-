@@ -13,7 +13,7 @@
 ## 4.修改配置文件
 在`configs\picodet\legacy_model\application\layout_analysis`下打开`picodet_lcnet_x1_0_layout.yml`文件进行编辑，
 
-将其中的`pretrain_weights`修改为`configs\pretrain_weights\models\picodet_lcnet_x1_0_fgd_layout.pdparams`，这一步将下载好的预训练模型文件放到`configs\pretrain_weights\models`目录下即可。`weights`修改为`output/picodet_lcnet_x1_0_layout/model_final`。
+将其中的`pretrain_weights`修改为`configs\models\picodet_lcnet_x1_0_fgd_layout.pdparams`，这一步将下载好的预训练模型文件放到`configs\models`目录下即可。`weights`修改为`output/picodet_lcnet_x1_0_layout/model_final`。
 
 `epoch`后的数字决定训练的次数，实测训练到30多epoch后准确率上升的次数较低，波动也较小，所以我选择了35个epoch进行训练。`num_classes`为标签种类，这次训练一共是四类。
 
@@ -38,4 +38,4 @@ python tools/infer.py -c configs/picodet/legacy_model/application/layout_analysi
 
 ```
 # 文件说明
-文件附上我自己修改的`picodet_lcnet_x1_0_layout.yml`  `optimizer_100e.yml`文件和预训练模型`picodet_lcnet_x1_0_fgd_layout.pdparams`
+文件附上我自己修改的`picodet_lcnet_x1_0_layout.yml`  `optimizer_100e.yml`文件、预训练模型`picodet_lcnet_x1_0_fgd_layout.pdparams`和格式转换的`json.py`
