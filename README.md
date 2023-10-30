@@ -37,3 +37,5 @@ python tools/infer.py -c configs/picodet/legacy_model/application/layout_analysi
 # --infer_img=处可以改为--infer_dir=就可以按文件夹来预测
 
 ```
+# 文件说明
+文件附上我自己修改的`picodet_lcnet_x1_0_layout.yml`  `optimizer_100e.yml`文件和预训练模型`picodet_lcnet_x1_0_fgd_layout.pdparams`
